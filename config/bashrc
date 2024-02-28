@@ -148,7 +148,5 @@ source /usr/share/doc/pkgfile/command-not-found.bash
 source /usr/share/nvm/init-nvm.sh
 
 # Transferable
-source ~/.transferable/.envs
-source ~/.transferable/.variables
-source ~/.transferable/.aliases
-source ~/.transferable/.shell_app_config
+source ~/src/config/shell/alias
+source ~/src/config/shell/env

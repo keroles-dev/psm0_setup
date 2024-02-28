@@ -40,7 +40,5 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # Transferable
-source ~/.transferable/.envs
-source ~/.transferable/.variables
-source ~/.transferable/.aliases
-source ~/.transferable/.shell_app_config
+source ~/src/config/shell/alias
+source ~/src/config/shell/env
