@@ -1,0 +1,5 @@
+# Env
+export PATH="${PATH}:/home/keroles/Android/Sdk/tools"
+export PATH="${PATH}:/home/keroles/Android/Sdk/platform-tools"
+export CHROME_EXECUTABLE="/usr/bin/chromium"
+export PATH="$PATH:/usr/bin/java"

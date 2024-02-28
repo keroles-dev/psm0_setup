@@ -1,0 +1,34 @@
+# Aliases
+
+# Genral
+alias z='zsh'
+alias b='bash'
+alias l='ls'
+alias ll='ls -a'
+alias lll='ls -lah'
+
+# Env
+alias flutter2='/home/keroles/flutter_v2/bin/flutter'
+alias flutter3='/home/keroles/flutter_v3/bin/flutter'
+
+# Script
+alias android-studio="nohup /home/keroles/android-studio/bin/studio.sh &"
+
+# Git
+alias gs='git status'
+alias gl="git log --graph --pretty=format:'%C(yellow)%d%Creset %C(cyan)%h%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=short --all"
+alias gac='git add . && git commit -m '
+alias ga='git add '
+alias gc='git commit -m '
+
+# Docker
+alias drm='docker rm -f '
+alias dl='docker logs '
+
+# ADB connect to device
+alias adb-connect="adb kill-server && adb tcpip 5555 && adb connect"
+
+# Services
+alias run-srv="doas systemctl start httpd"
+alias srv-conf="doas vim /etc/httpd/conf/httpd.conf"
+alias run-docker="doas systemctl start docker.service"
