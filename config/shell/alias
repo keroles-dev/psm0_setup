@@ -1,11 +1,23 @@
 # Aliases
 
 # Genral
+alias xc='xclip'
+alias xcs='xclip -selection clipboard'
+alias c='clear'
+alias h='cd ~'
+alias d='cd ~/dev'
 alias z='zsh'
 alias b='bash'
+alias v='vim '
 alias l='ls'
-alias ll='ls -a'
+alias ll='ls -lh'
 alias lll='ls -lah'
+
+# Packages
+alias q='doas pacman -Q'
+alias u='doas pacman -Syu'
+alias i='doas pacman -S'
+alias r='doas pacman -Rcns'
 
 # Env
 alias flutter2='/home/keroles/flutter_v2/bin/flutter'
