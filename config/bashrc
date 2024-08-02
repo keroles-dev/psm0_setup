@@ -150,3 +150,10 @@ source /usr/share/nvm/init-nvm.sh
 # Transferable
 source ~/src/config/shell/alias
 source ~/src/config/shell/env
+
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
+export FZF_DEFAULT_OPS="--EXTENDED"
+export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_CTRL_T_COMMAND='$FZF_DEFAULT_COMMAND'
+

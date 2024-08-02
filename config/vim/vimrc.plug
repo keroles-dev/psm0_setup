@@ -1,0 +1,18 @@
+call plug#begin()
+
+" File explorer tree
+Plug 'preservim/nerdtree'
+
+" Tab Autocomplete
+Plug 'ervandew/supertab'
+
+" Fugitive Vim Github Wrapper
+Plug 'tpope/vim-fugitive'
+
+" FZF
+Plug 'junegunn/fzf'
+
+" gruvbox mode
+Plug 'morhetz/gruvbox'
+call plug#end()
+

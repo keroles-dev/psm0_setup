@@ -5,13 +5,13 @@ SAVEHIST=2000
 bindkey -v
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+bindkey ^d forward-word
 
-# End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/keroles/.zshrc'
+#zstyle :compinstall filename '/home/keroles/.zshrc'
 
-autoload -Uz compinit
-compinit
+#autoload -Uz compinit
+#compinit
 # End of lines added by compinstall
 
 function git_branch_name()
@@ -38,7 +38,15 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # History substring search
 source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+# nvm
+source /usr/share/nvm/init-nvm.sh
 
 # Transferable
 source ~/src/config/shell/alias
 source ~/src/config/shell/env
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+export FZF_DEFAULT_OPS="--EXTENDED"
+export FZF_DEFAULT_COMMAND="fd --type f"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
