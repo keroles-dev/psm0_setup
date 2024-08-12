@@ -24,7 +24,7 @@ alias flutter2='/home/keroles/flutter_v2/bin/flutter'
 alias flutter3='/home/keroles/flutter_v3/bin/flutter'
 
 # Script
-alias android-studio="nohup /home/keroles/android-studio/bin/studio.sh &"
+alias android-studio="nohup /home/keroles/android-studio/bin/studio.sh &;disown;"
 
 # Git
 alias gs='git status'
