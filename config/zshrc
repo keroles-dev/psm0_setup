@@ -8,10 +8,10 @@ bindkey '^[[B' history-substring-search-down
 bindkey ^d forward-word
 
 # The following lines were added by compinstall
-#zstyle :compinstall filename '/home/keroles/.zshrc'
+zstyle :compinstall filename '/home/keroles/.zshrc'
 
-#autoload -Uz compinit
-#compinit
+autoload -Uz compinit
+compinit
 # End of lines added by compinstall
 
 function git_branch_name()

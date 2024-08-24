@@ -17,7 +17,7 @@ alias lll='ls -lah'
 alias q='doas pacman -Q'
 alias u='doas pacman -Syu'
 alias i='doas pacman -S'
-alias r='doas pacman -Rcns'
+alias r='doas pacman -Runc'
 
 # Env
 alias flutter2='/home/keroles/flutter_v2/bin/flutter'
@@ -27,6 +27,7 @@ alias flutter3='/home/keroles/flutter_v3/bin/flutter'
 alias android-studio="nohup /home/keroles/android-studio/bin/studio.sh &;disown;"
 
 # Git
+alias g='git'
 alias gs='git status'
 alias gl="git log --graph --pretty=format:'%C(yellow)%d%Creset %C(cyan)%h%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=short --all"
 alias gac='git add . && git commit -m '
