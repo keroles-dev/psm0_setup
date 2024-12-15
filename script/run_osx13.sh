@@ -1,5 +1,3 @@
-doas systemctl start docker.service;
-
-xhost +;
+xhost +
 
 docker start -ai osx13;

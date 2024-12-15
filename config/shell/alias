@@ -41,7 +41,5 @@ alias dl='docker logs '
 # ADB connect to device
 alias adb-connect="adb kill-server && adb tcpip 5555 && adb connect"
 
-# Services
-alias run-srv="doas systemctl start httpd"
-alias srv-conf="doas vim /etc/httpd/conf/httpd.conf"
-alias run-docker="doas systemctl start docker.service"
+# Tools
+alias mpip='curl https://checkip.amazonaws.com'

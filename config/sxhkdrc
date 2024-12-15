@@ -4,6 +4,9 @@ super + Return
 super + shift + w
 	firefox-developer-edition
 
+super + alt + w
+  firefox
+
 super + w
 	surf duckduckgo.com
 

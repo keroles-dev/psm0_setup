@@ -29,6 +29,7 @@ colorscheme gruvbox
 
 filetype plugin indent on
 set modelines=0
+set clipboard=unnamed
 set wrap
 set cuc
 set autoindent
