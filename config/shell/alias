@@ -4,7 +4,7 @@
 alias xc='xclip'
 alias xcs='xclip -selection clipboard'
 alias c='clear'
-alias h='cd ~'
+alias h='cd ~/hunt'
 alias d='cd ~/dev'
 alias z='zsh'
 alias b='bash'

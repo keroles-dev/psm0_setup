@@ -6,7 +6,8 @@ bindkey -v
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey ^d forward-word
-
+bindkey ^a beginning-of-line
+bindkey ^e end-of-line
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/keroles/.zshrc'
 
