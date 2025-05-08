@@ -16,6 +16,7 @@ alias lll='ls -lah'
 # Packages
 alias q='doas pacman -Q'
 alias u='doas pacman -Syu'
+alias uu='doas pacman -Syyu'
 alias i='doas pacman -S'
 alias r='doas pacman -Runc'
 
