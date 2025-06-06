@@ -9,9 +9,9 @@ alias d='cd ~/dev'
 alias z='zsh'
 alias b='bash'
 alias v='vim '
-alias l='ls'
-alias ll='ls -lh'
-alias lll='ls -lah'
+alias ll='ls'
+alias l='ls -lah'
+alias rand='f(){ cat /dev/urandom | tr -dc "a-zA-Z0-9/_+=*&^%$#@" | fold -w $1 | head -n 1 | xclip -selection clipboard; unset -f f; }; f'
 
 # Packages
 alias q='doas pacman -Q'
@@ -40,7 +40,7 @@ alias drm='docker rm -f '
 alias dl='docker logs '
 
 # ADB connect to device
-alias adb-connect="adb kill-server && adb tcpip 5555 && adb connect"
+alias adb-connect="adb kill-server;adb tcpip 5555;adb connect"
 
 # Tools
 alias mpip='curl https://checkip.amazonaws.com'
