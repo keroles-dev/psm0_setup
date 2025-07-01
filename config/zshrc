@@ -27,10 +27,10 @@ function git_branch_name()
 }
 
 setopt prompt_subst
-prompt='%{%F{cyan}%}%n@%m:%~/$(git_branch_name) > '
+prompt='%{%F{cyan}%}%n@%m:%~/%{%F{yellow}%}$(git_branch_name) %{%F{cyan}%}> '
 
 # Command not found
-source /usr/share/doc/pkgfile/command-not-found.zsh
+#source /usr/share/doc/pkgfile/command-not-found.zsh
 # Auto suggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Auto compiletions
