@@ -5,7 +5,7 @@ super + shift + w
 	firefox-developer-edition
 
 super + alt + w
-  firefox
+  librewolf
 
 super + w
 	surf duckduckgo.com
@@ -14,10 +14,10 @@ super + n
   mousepad
 
 F2
-	xbacklight -dec 5
+	xbacklight -dec 2
 
 F3
-	xbacklight -inc 5
+	xbacklight -inc 2
 
 F6
 	amixer set Master toggle
