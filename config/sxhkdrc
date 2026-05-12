@@ -1,11 +1,11 @@
 super + Return
-	st zsh
+	st
 
 super + shift + w
-	firefox-developer-edition
+	firefox-developer
 
 super + alt + w
-  librewolf
+	firefox-developer-edition
 
 super + w
 	surf duckduckgo.com
@@ -14,37 +14,31 @@ super + n
   mousepad
 
 F2
-	xbacklight -dec 2
+	brightnessctl set 1%-
 
 F3
-	xbacklight -inc 2
+	brightnessctl set +1%
 
 F6
 	amixer set Master toggle
 
 F7
-	amixer -D pulse sset Master 1%-
+	amixer sset Master 1%-
 
 F8
-	amixer -D pulse sset Master 1%+
+	amixer sset Master 1%+
 
 F9
 	amixer set Capture toggle
 
 F10
-	amixer -D pulse sset Capture 5%-
+	amixer sset Capture 5%-
 
 F11
-	amixer -D pulse sset Capture 5%+
+	amixer sset Capture 5%+
 
 super + equal
 	sh ~/src/script/mount.sh
-
-super + shift + equal
-	jmtpfs -o ~/mnt
-
-super + minus
-	fusermount -u ~/mnt
 
 super + BackSpace
 	sh ~/src/script/exit.sh

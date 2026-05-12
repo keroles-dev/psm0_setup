@@ -72,14 +72,14 @@ static const char unknown_str[] = "n/a";
  */
 
 static const char vol[]         = "[ `amixer sget Master | tail -n 1 | awk '{print $6;}'` = \"[on]\" ] \
-                                   && printf \"`amixer sget Master | tail -n 1 | awk '{print $5;}' | grep -Po '\\[\\K[^%]*'`%%\" \
+                                   && printf \"`amixer sget Master | tail -n 1 | awk '{print $4;}' | grep -Po '\\[\\K[^%]*'`%%\" \
                                    || printf 'Off'";
 
-static const char mic[]         = "[ `amixer sget Capture | tail -n 1 | awk '{print $6;}'` = \"[on]\" ] \
+static const char mic[]         = "[ `amixer sget Capture | tail -n 1 | awk '{print $7;}'` = \"[on]\" ] \
                                    && printf \"`amixer sget Capture | tail -n 1 | awk '{print $5;}' | grep -Po '\\[\\K[^%]*'`%%\" \
                                    || printf 'Off'";
 
-static const char lit[]         = "(echo `xbacklight|grep -Po '^([0-9]+)'`)";
+static const char lit[]         = "(echo `brightnessctl | grep -oP '\\(\\K[^)]*'`)";
 
 
 static const char ctemp[]         = "cat /sys/class/thermal/thermal_zone*/temp | sort -nr | head -n1 | grep -Po '^..'";
@@ -88,20 +88,21 @@ static const char ctemp[]         = "cat /sys/class/thermal/thermal_zone*/temp |
 static const struct arg args[] = {
         /* function format          argument */
         { keymap,               "%s | ",            NULL },
-        { run_command,          "lit %s%% | ",      lit },
+        { run_command,          "lit %s | ",      lit },
         { run_command,          "vol %s | ",        vol },
         { run_command,          "mic %s | ",        mic },
         { wifi_essid,           "%s ",              "wlo1" },
-	      { wifi_perc,            "%s%% ",            "wlo1" },
-	      { netspeed_rx,          "rx %s ",           "wlo1" },
-	      { netspeed_tx,          "tx %s | ",         "wlo1" },
+	{ wifi_perc,            "%s%% ",            "wlo1" },
+	{ netspeed_rx,          "rx %s ",           "wlo1" },
+	{ netspeed_tx,          "tx %s | ",         "wlo1" },
         { cpu_perc,             "cpu %s%% ",        NULL },
-	      { run_command,          "%sc | ",           ctemp},
-        { ram_perc,             "ram %s%% ",        NULL },
-	      { swap_perc,            "swap %s%% | ",     NULL },
-	      { entropy,              "ent %s | ",        NULL},
+	{ run_command,          "%sc | ",           ctemp},
+        { ram_perc,             "mem %s%% ",        NULL },
+	{ swap_perc,            "swap %s%% ",     NULL },
+	{ disk_perc,            "hdd %s%% | ",      "/" },
+	{ entropy,              "ent %s | ",        NULL},
         { battery_perc,         "bat %s%% ",        "BAT1"},
-	      { battery_state,        "%s | ",            "BAT1"},
+	{ battery_state,        "%s | ",            "BAT1"},
         { uptime,               "up %s | ",            NULL},
         { datetime,             "%s",               "%a %F %T" }, /* Date time with this format: Day name YYYY-MM-DD 18:00:00 */
 	      { battery_notify,       "",                 "BAT1"},

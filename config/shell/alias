@@ -1,34 +1,40 @@
 # Aliases
 
-# Genral
+alias c='clear'
+
+# ls
+alias ls='ls --color=auto --group-directories-first'
+alias ll='ls -lahtr --color=auto --group-directories-first'
+alias la='ls -A --color=auto'
+alias l='ls -CF --color=auto'
+alias tree='tree -C'
+
+# navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+# grep
+alias grep='grep --colour=auto'
+alias egrep='egrep --colour=auto'
+alias fgrep='fgrep --colour=auto'
+
+# xlip
 alias xc='xclip'
 alias xcs='xclip -selection clipboard'
-alias c='clear'
-alias h='cd ~/hunt'
-alias d='cd ~/dev'
-alias z='zsh'
-alias b='bash'
-alias v='vim '
-alias l='ls -lhtr'
-alias ll='ls -lahtr'
+
+# wifi
 alias wcl='nmcli dev wifi list'
 alias wcu='nmcli c up -a '
 alias wcd='nmcli c down '
-alias rand='f(){ cat /dev/urandom | tr -dc "a-zA-Z0-9/_+=*&^%$#@" | fold -w $1 | head -n 1 | xclip -selection clipboard; unset -f f; }; f'
 
 # Packages
-alias q='doas pacman -Q'
+alias q='doas pacman -Qs'
+alias qr='doas pacman -Ss'
 alias u='doas pacman -Syu'
 alias uu='doas pacman -Syyu'
 alias i='doas pacman -S'
 alias r='doas pacman -Runc'
-
-# Env
-alias flutter2='/home/keroles/flutter_v2/bin/flutter'
-alias flutter3='/home/keroles/flutter_v3/bin/flutter'
-
-# Script
-alias android-studio="nohup /home/keroles/android-studio/bin/studio.sh &;disown;"
 
 # Git
 alias g='git'
@@ -47,3 +53,4 @@ alias adbc="adb kill-server;adb tcpip 5555;adb connect"
 
 # Tools
 alias mpip='curl https://checkip.amazonaws.com'
+alias rand='f(){ cat /dev/urandom | tr -dc "a-zA-Z0-9/_+=*&^%$#@" | fold -w $1 | head -n 1 | xclip -selection clipboard; unset -f f; }; f'

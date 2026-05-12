@@ -10,8 +10,8 @@ static const char *splitdelim        = ";";       /* Character used for separati
 static const char *fonts[]          = { "Droid Sans:size=9" };
 static const char dmenufont[]       = "Droid Sans:size=9";
 static const char col_bg[]              = "#1d2021";
-static const char col_fg[]              = "#d5c4a1";
-static const char col_bg_cyan[]         = "#076678";
+static const char col_fg[]              = "#ebdbb2";
+static const char col_bg_cyan[]         = "#005577";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_fg, col_bg,      col_bg       },
