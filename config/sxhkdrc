@@ -52,3 +52,5 @@ ctrl + Print
 ctrl + shift + Print
 	 maim -s ~/Pictures/screenshots/$(date +%s).png
 
+alt + shift
+   setxkbmap -query | grep -q 'eg' && setxkbmap us || setxkbmap eg,us

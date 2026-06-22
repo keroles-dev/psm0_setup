@@ -35,5 +35,6 @@ shopt -s histappend
 PROMPT_COMMAND="history -a; history -c; history -r"
 
 # Import
+source /usr/share/nvm/init-nvm.sh
 source ~/src/config/shell/alias
 source ~/src/config/shell/env

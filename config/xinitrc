@@ -1,4 +1,7 @@
-setxkbmap -option grp:lshift_lalt_toggle us,eg
+# setxkbmap -option grp:lshift_lalt_toggle us,eg
+
+dbus-update-activation-environment --all
+gnome-keyring-daemon --start --components=secrets
 
 sh ~/src/script/setup_multi_monitores.sh
 
